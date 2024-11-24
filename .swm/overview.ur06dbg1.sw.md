@@ -6,7 +6,7 @@ CardDemo is a Mainframe application designed and developed to test and showcase 
 ## Main Components
 
 ```mermaid
-graph TD;
+graph LR;
  jgzg3("Sign-On Screen (COSGN00C)") --> 8d4h2("Main Menu (COMEN01C)")
  g7wnu("Viewing Transactions (COTRN01C)") --> by25l("Listing Transactions (COTRN00C)")
  by25l("Listing Transactions (COTRN00C)") --> g7wnu("Viewing Transactions (COTRN01C)")
@@ -194,4 +194,4 @@ Printing Customer Data (CBCUS01C) is a batch COBOL program that reads and prints
 
 *This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="kyndryl-aws-mainframe-modernization-carddemo"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="kyndryl-aws-mainframe-modernization-carddemo"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
