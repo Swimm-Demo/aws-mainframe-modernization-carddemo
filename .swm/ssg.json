@@ -1,0 +1,36 @@
+{
+  "generator": "docusaurus",
+  "url": "https://swimm-demo.github.io/aws-mainframe-modernization-carddemo/",
+  "docs": {
+    "overview.ur06dbg1.sw.md": "Overview",
+    "date-validation-and-formatting-csutldtc.6fg72fy2.sw.md": "Docs",
+    "listing-users-cousr00c.h0h10c9e.sw.md": "Docs",
+    "bill-payments-cobil00c.cf8pp10q.sw.md": "Docs",
+    "updating-user-data-cousr02c.fytskq6c.sw.md": "Docs",
+    "interest-calculations-cbact04c.janbwsq5.sw.md": "Docs",
+    "viewing-transactions-cotrn01c.26iwdtc5.sw.md": "Docs",
+    "processing-daily-transactions-cbtrn02c.svz9tjio.sw.md": "Docs",
+    "printing-customer-data-cbcus01c.jn4uuhkk.sw.md": "Docs",
+    "transaction-detail-reports-cbtrn03c.yv4fidg4.sw.md": "Docs",
+    "credit-card-details-cocrdupc.var8z9kr.sw.md": "Docs",
+    "listing-credit-cards-cocrdlic.sd4h52rh.sw.md": "Docs",
+    "adding-transactions-cotrn02c.akpbxkpz.sw.md": "Docs",
+    "transaction-reports-corpt00c.onx7g7mm.sw.md": "Docs",
+    "deleting-users-cousr03c.hfkidvkq.sw.md": "Docs",
+    "listing-transactions-cotrn00c.vwr450pm.sw.md": "Docs",
+    "posting-daily-transactions-cbtrn01c.dt5zk61p.sw.md": "Docs",
+    "printing-account-x-ref-cbact03c.nl510qe4.sw.md": "Docs",
+    "adding-new-users-cousr01c.fwf9px00.sw.md": "Docs",
+    "printing-account-data-cbact01c.yut8k6dv.sw.md": "Docs",
+    "sign-on-screen-cosgn00c.6qlm59m3.sw.md": "Docs",
+    "main-menu-comen01c.qrn494sb.sw.md": "Docs",
+    "printing-card-data-cbact02c.5odre56z.sw.md": "Docs",
+    "credit-card-details-cocrdslc.fg0jbdef.sw.md": "Docs",
+    "admin-menu-coadm01c.ckxu4r8z.sw.md": "Docs",
+    "account-view-requests-coactvwc.kja4pipt.sw.md": "Docs"
+  },
+  "config": {
+    "title": "Swimm Docs",
+    "tagline": "Get started in minutes"
+  }
+}
