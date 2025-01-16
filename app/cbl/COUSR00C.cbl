@@ -95,7 +95,7 @@
       *                       PROCEDURE DIVISION
       *----------------------------------------------------------------*
        PROCEDURE DIVISION.
-       MAIN-PARA.
+       MAIN-PARA SECTION.
 
            SET ERR-FLG-OFF TO TRUE
            SET USER-SEC-NOT-EOF TO TRUE

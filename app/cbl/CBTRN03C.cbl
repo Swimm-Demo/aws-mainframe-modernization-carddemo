@@ -156,7 +156,8 @@
        01 TIMING                PIC S9(9) BINARY.                               
                                                                                 
       *****************************************************************         
-       PROCEDURE DIVISION.                                                      
+       PROCEDURE DIVISION.   
+       MAIN SECTION.                                                   
            DISPLAY 'START OF EXECUTION OF PROGRAM CBTRN03C'.                    
            PERFORM 0000-TRANFILE-OPEN.                                          
            PERFORM 0100-REPTFILE-OPEN.                                          

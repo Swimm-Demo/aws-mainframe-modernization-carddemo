@@ -190,7 +190,8 @@
            05 WS-CREATE-TRANCAT-REC         PIC X(01) VALUE 'N'.                
                                                                                 
       *****************************************************************         
-       PROCEDURE DIVISION.                                                      
+       PROCEDURE DIVISION.  
+       MAIN SECTION.                                                    
            DISPLAY 'START OF EXECUTION OF PROGRAM CBTRN02C'.                    
            PERFORM 0000-DALYTRAN-OPEN.                                          
            PERFORM 0100-TRANFILE-OPEN.                                          

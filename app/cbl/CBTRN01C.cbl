@@ -152,7 +152,7 @@
 
       *****************************************************************
        PROCEDURE DIVISION.
-       MAIN-PARA.
+       MAIN-PARA SECTION.
            DISPLAY 'START OF EXECUTION OF PROGRAM CBTRN01C'.
            PERFORM 0000-DALYTRAN-OPEN.
            PERFORM 0100-CUSTFILE-OPEN.

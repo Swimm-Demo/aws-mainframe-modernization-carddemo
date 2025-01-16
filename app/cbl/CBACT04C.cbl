@@ -177,7 +177,8 @@
            05  PARM-LENGTH         PIC S9(04) COMP.                             
            05  PARM-DATE           PIC X(10).                                   
       *****************************************************************         
-       PROCEDURE DIVISION USING EXTERNAL-PARMS.                                 
+       PROCEDURE DIVISION USING EXTERNAL-PARMS.  
+       MAIN SECTION.                               
            DISPLAY 'START OF EXECUTION OF PROGRAM CBACT04C'.                    
            PERFORM 0000-TCATBALF-OPEN.                                          
            PERFORM 0100-XREFFILE-OPEN.                                          

@@ -100,7 +100,7 @@
            EXIT PROGRAM                                                         
       *    GOBACK                                                               
            .                                                                    
-       A000-MAIN.                                                               
+       A000-MAIN SECTION.                                                               
                                                                                 
            MOVE LENGTH OF LS-DATE                                               
                         TO VSTRING-LENGTH  OF WS-DATE-TO-TEST                   

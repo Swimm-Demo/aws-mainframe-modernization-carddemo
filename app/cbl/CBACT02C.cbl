@@ -67,7 +67,8 @@
        01  TIMING                  PIC S9(9) BINARY.                            
                                                                                 
       *****************************************************************         
-       PROCEDURE DIVISION.                                                      
+       PROCEDURE DIVISION.   
+       MAIN SECTION.                                                   
            DISPLAY 'START OF EXECUTION OF PROGRAM CBACT02C'.                    
            PERFORM 0000-CARDFILE-OPEN.                                          
                                                                                 

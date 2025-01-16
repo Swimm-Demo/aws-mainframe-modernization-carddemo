@@ -295,7 +295,7 @@
              OCCURS 1 TO 32767 TIMES DEPENDING ON EIBCALEN.                     
                                                                                 
        PROCEDURE DIVISION.                                                      
-       0000-MAIN.                                                               
+       0000-MAIN SECTION.                                                               
                                                                                 
            INITIALIZE CC-WORK-AREA                                              
                       WS-MISC-STORAGE                                           

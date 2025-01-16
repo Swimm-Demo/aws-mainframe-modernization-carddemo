@@ -68,6 +68,7 @@
 
       *****************************************************************
        PROCEDURE DIVISION.
+       MAIN SECTION.
            DISPLAY 'START OF EXECUTION OF PROGRAM CBCUS01C'.
            PERFORM 0000-CUSTFILE-OPEN.
 
