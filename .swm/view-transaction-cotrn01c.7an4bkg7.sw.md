@@ -1,7 +1,6 @@
 ---
 title: View Transaction (COTRN01C)
 ---
-
 The document provides a detailed explanation of the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="86:1:3" line-data="       MAIN-PARA." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`MAIN-PARA`</SwmToken> function and the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="114:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function within the program. These functions used for handling the entry point of the program and processing user inputs to view transaction details.
 
 # Usages
@@ -12,7 +11,7 @@ graph TD
 
 ```
 
-# Program drill down
+# Program Drill Down
 
 ```mermaid
 flowchart TB
@@ -86,7 +85,7 @@ The <SwmToken path="/app/cbl/COTRN01C.cbl" pos="86:1:3" line-data="       MAIN-
 - If the user presses the Enter key (<SwmToken path="/app/cbl/COTRN01C.cbl" pos="113:3:3" line-data="                       WHEN DFHENTER" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DFHENTER`</SwmToken>), it performs the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="114:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function to show the selected transaction.&nbsp;
 - If the user presses the PF3 key (<SwmToken path="/app/cbl/COTRN00C.cbl" pos="122:3:3" line-data="                       WHEN DFHPF3" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DFHPF3`</SwmToken>), it performs the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="122:3:9" line-data="                           PERFORM RETURN-TO-PREV-SCREEN" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`RETURN-TO-PREV-SCREEN`</SwmToken> to navigate to the previous screen.
 - If the user presses the `PF4` key (<SwmToken path="/app/cbl/COTRN01C.cbl" pos="123:3:3" line-data="                       WHEN DFHPF4" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DFHPF4`</SwmToken>), it clears the screen.&nbsp;
-- If the user presses the PF5 key (<SwmToken path="/app/cbl/COTRN01C.cbl" pos="125:3:3" line-data="                       WHEN DFHPF5" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DFHPF5`</SwmToken>), it navigates to the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="126:4:4" line-data="                           MOVE &#39;COTRN00C&#39; TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`COTRN00C`</SwmToken> program which shows the transaction list.&nbsp;
+- If the user presses the PF5 key (<SwmToken path="/app/cbl/COTRN01C.cbl" pos="125:3:3" line-data="                       WHEN DFHPF5" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DFHPF5`</SwmToken>), it navigates to the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="126:4:4" line-data="                           MOVE &#39;COTRN00C&#39; TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`COTRN00C`</SwmToken> program which shows the transaction list.
 - For any other input, it calls the <SwmToken path="/app/cbl/COTRN01C.cbl" pos="109:3:7" line-data="                   PERFORM SEND-TRNVIEW-SCREEN" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SEND-TRNVIEW-SCREEN`</SwmToken> operation to show an error.
 
 ```
@@ -206,6 +205,6 @@ If the transaction is successfully fetched, the function maps the transaction de
 
 &nbsp;
 
-_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
+*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
