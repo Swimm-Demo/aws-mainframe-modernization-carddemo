@@ -1,9 +1,14 @@
 ---
 title: Main Menu Interface (COMEN01C)
 ---
+
 The <SwmToken path="/app/cbl/COMEN01C.cbl" pos="2:7:7" line-data="      * Program     : COMEN01C.CBL" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`COMEN01C`</SwmToken> program serves as the main menu interface for regular users in the application.
 
 # Usages
+
+This program is used multiple times in the codebase as represented in the following diagram:
+
+(Note - these are only some of the usages of this program)
 
 ```mermaid
 graph TD
@@ -179,6 +184,6 @@ If no errors are present, the function sets the necessary transaction and progra
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
