@@ -1,6 +1,7 @@
 ---
 title: Bill Payment (COBIL00C)
 ---
+
 This document provides a detailed overview of the bill payment transaction flow. It explains how user inputs are processed, account balances are updated, and payment transactions are recorded.
 
 ```mermaid
@@ -14,13 +15,13 @@ flowchart TB
 
 # Bill Payment Transaction Flow
 
-<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="173" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="173" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-## <SwmToken path="/app/cbl/COBIL00C.cbl" pos="120:3:7" line-data="                       PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken>
+## <SwmToken path="/app/cbl/COBIL00C.cbl" pos="120:3:7" line-data="                       PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken>
 
-The <SwmToken path="/app/cbl/COBIL00C.cbl" pos="120:3:7" line-data="                       PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function handles main bill payment logic. First, it checks for payment confirmation. If the user confirms the payment, the account data file is read. If the user declines, the current screen is cleared, and an error flag is set. For any other input, an error message is displayed, and the bill payment screen is sent to the user interface.
+The <SwmToken path="/app/cbl/COBIL00C.cbl" pos="120:3:7" line-data="                       PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function handles main bill payment logic. First, it checks for payment confirmation. If the user confirms the payment, the account data file is read. If the user declines, the current screen is cleared, and an error flag is set. For any other input, an error message is displayed, and the bill payment screen is sent to the user interface.
 
 ```cobol
                EVALUATE CONFIRMI OF COBIL0AI
@@ -48,7 +49,7 @@ The <SwmToken path="/app/cbl/COBIL00C.cbl" pos="120:3:7" line-data="            
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="197" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="197" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -71,7 +72,7 @@ Next, the account balance is checked to ensure there is an amount to pay. If the
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="208" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="208" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -94,7 +95,7 @@ If there are no errors and the payment is confirmed, the payment processing step
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="218" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="218" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -123,7 +124,7 @@ Following this, the transaction record is created, and various transaction detai
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="234" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COBIL00C.cbl" line="234" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -140,6 +141,6 @@ Finally, the account balance is updated by deducting the transaction amount from
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>

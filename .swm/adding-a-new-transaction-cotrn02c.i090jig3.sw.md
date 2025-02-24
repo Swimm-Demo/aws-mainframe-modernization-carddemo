@@ -26,18 +26,18 @@ A -->|"CONFIRMI = OTHER"| K["Set Invalid Value Error"]
 
 ## Processing User Input
 
-The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> paragraph acts as a central hub in this program for adding a new transaction. It called from sevral places in this program:
+The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> paragraph acts as a central hub in this program for adding a new transaction. It called from sevral places in this program:
 
-- From <SwmToken path="/app/cbl/COTRN02C.cbl" pos="107:1:3" line-data="       MAIN-PARA." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`MAIN-PARA`</SwmToken> when:
+- From <SwmToken path="/app/cbl/COTRN02C.cbl" pos="107:1:3" line-data="       MAIN-PARA." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`MAIN-PARA`</SwmToken> when:
   - First time entry with pre-selected transaction
   - User hits ENTER key (DFHENTER)&nbsp;
-- From <SwmToken path="/app/cbl/COTRN02C.cbl" pos="147:3:9" line-data="                           PERFORM COPY-LAST-TRAN-DATA" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`COPY-LAST-TRAN-DATA`</SwmToken> after copying previous transaction
+- From <SwmToken path="/app/cbl/COTRN02C.cbl" pos="147:3:9" line-data="                           PERFORM COPY-LAST-TRAN-DATA" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`COPY-LAST-TRAN-DATA`</SwmToken> after copying previous transaction
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="164" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="164" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function begins by calling the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="166:3:9" line-data="           PERFORM VALIDATE-INPUT-KEY-FIELDS" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-KEY-FIELDS`</SwmToken> function to validate the input account or card number, followed by the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="167:3:9" line-data="           PERFORM VALIDATE-INPUT-DATA-FIELDS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-DATA-FIELDS`</SwmToken> function to validate various input fields of the transaction.
+The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function begins by calling the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="166:3:9" line-data="           PERFORM VALIDATE-INPUT-KEY-FIELDS" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-KEY-FIELDS`</SwmToken> function to validate the input account or card number, followed by the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="167:3:9" line-data="           PERFORM VALIDATE-INPUT-DATA-FIELDS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-DATA-FIELDS`</SwmToken> function to validate various input fields of the transaction.
 
 ```
        PROCESS-ENTER-KEY.
@@ -50,15 +50,15 @@ The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCE
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="193" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="193" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ## Validating Input Key Fields
 
-The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="166:3:9" line-data="           PERFORM VALIDATE-INPUT-KEY-FIELDS" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-KEY-FIELDS`</SwmToken> function is responsible for validating the input account or card number.&nbsp;
+The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="166:3:9" line-data="           PERFORM VALIDATE-INPUT-KEY-FIELDS" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`VALIDATE-INPUT-KEY-FIELDS`</SwmToken> function is responsible for validating the input account or card number.&nbsp;
 
-For the account ID (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="223:11:15" line-data="                   MOVE XREF-ACCT-ID         TO ACTIDINI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACTIDINI OF COTRN2AI`</SwmToken>) it validates that it's numeric and has a corresponding card number using <SwmToken path="/app/cbl/COTRN02C.cbl" pos="208:3:7" line-data="                   PERFORM READ-CXACAIX-FILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`READ-CXACAIX-FILE`</SwmToken>
+For the account ID (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="223:11:15" line-data="                   MOVE XREF-ACCT-ID         TO ACTIDINI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACTIDINI OF COTRN2AI`</SwmToken>) it validates that it's numeric and has a corresponding card number using <SwmToken path="/app/cbl/COTRN02C.cbl" pos="208:3:7" line-data="                   PERFORM READ-CXACAIX-FILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`READ-CXACAIX-FILE`</SwmToken>
 
 ```
        VALIDATE-INPUT-KEY-FIELDS.
@@ -84,11 +84,11 @@ For the account ID (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="223:11:15" line-
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="210" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="210" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-For the card number (`CARDNINI OF COTRN2AI`) it validates that it's numeric and has a corresponding account ID using <SwmToken path="/app/cbl/COTRN02C.cbl" pos="222:3:7" line-data="                   PERFORM READ-CCXREF-FILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`READ-CCXREF-FILE`</SwmToken>.
+For the card number (`CARDNINI OF COTRN2AI`) it validates that it's numeric and has a corresponding account ID using <SwmToken path="/app/cbl/COTRN02C.cbl" pos="222:3:7" line-data="                   PERFORM READ-CCXREF-FILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`READ-CCXREF-FILE`</SwmToken>.
 
 ```
                WHEN CARDNINI OF COTRN2AI NOT = SPACES AND LOW-VALUES
@@ -111,7 +111,7 @@ For the card number (`CARDNINI OF COTRN2AI`) it validates that it's numeric and 
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="224" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="224" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -131,7 +131,7 @@ If neither the account ID nor the card number is provided, an error flag is set,
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="251" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="251" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -213,11 +213,11 @@ The `VALIDATE-INPUT-DATA-FIELDS` function validates various input fields of the 
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="323" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="323" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-Next, the function checks if the transaction type code (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="323:3:7" line-data="               WHEN TTYPCDI OF COTRN2AI NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TTYPCDI OF COTRN2AI`</SwmToken>) and the transaction category code (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="329:3:7" line-data="               WHEN TCATCDI OF COTRN2AI NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TCATCDI OF COTRN2AI`</SwmToken>) are numeric, setting an error flag and displaying an appropriate error message if they are not.
+Next, the function checks if the transaction type code (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="323:3:7" line-data="               WHEN TTYPCDI OF COTRN2AI NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TTYPCDI OF COTRN2AI`</SwmToken>) and the transaction category code (<SwmToken path="/app/cbl/COTRN02C.cbl" pos="329:3:7" line-data="               WHEN TCATCDI OF COTRN2AI NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TCATCDI OF COTRN2AI`</SwmToken>) are numeric, setting an error flag and displaying an appropriate error message if they are not.
 
 ```cobol
                WHEN TTYPCDI OF COTRN2AI NOT NUMERIC
@@ -238,11 +238,11 @@ Next, the function checks if the transaction type code (<SwmToken path="/app/cbl
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="339" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="339" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The function then validates the format of the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="386:13:17" line-data="           MOVE WS-TRAN-AMT-E TO TRNAMTI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TRNAMTI OF COTRN2AI`</SwmToken> (transaction amount) to ensure it follows the format <SwmToken path="/app/cbl/COTRN02C.cbl" pos="345:14:17" line-data="                   MOVE &#39;Amount should be in format -99999999.99&#39; TO" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`-99999999.99`</SwmToken>, setting an error flag and displaying an error message if it does not.
+The function then validates the format of the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="386:13:17" line-data="           MOVE WS-TRAN-AMT-E TO TRNAMTI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TRNAMTI OF COTRN2AI`</SwmToken> (transaction amount) to ensure it follows the format <SwmToken path="/app/cbl/COTRN02C.cbl" pos="345:14:17" line-data="                   MOVE &#39;Amount should be in format -99999999.99&#39; TO" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`-99999999.99`</SwmToken>, setting an error flag and displaying an error message if it does not.
 
 ```cobol
            EVALUATE TRUE
@@ -261,11 +261,11 @@ The function then validates the format of the <SwmToken path="/app/cbl/COTRN02C.
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="353" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="353" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-Similarly, the function validates the format of the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="354:3:7" line-data="               WHEN TORIGDTI OF COTRN2AI(1:4) IS NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TORIGDTI OF COTRN2AI`</SwmToken> (original date) and <SwmToken path="/app/cbl/COTRN02C.cbl" pos="369:3:7" line-data="               WHEN TPROCDTI OF COTRN2AI(1:4) IS NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TPROCDTI OF COTRN2AI`</SwmToken> (processing date) to ensure they follow the format <SwmToken path="/app/cbl/COTRN02C.cbl" pos="360:16:20" line-data="                   MOVE &#39;Orig Date should be in format YYYY-MM-DD&#39; TO" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`YYYY-MM-DD`</SwmToken>, setting an error flag and displaying an error message if they do not.
+Similarly, the function validates the format of the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="354:3:7" line-data="               WHEN TORIGDTI OF COTRN2AI(1:4) IS NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TORIGDTI OF COTRN2AI`</SwmToken> (original date) and <SwmToken path="/app/cbl/COTRN02C.cbl" pos="369:3:7" line-data="               WHEN TPROCDTI OF COTRN2AI(1:4) IS NOT NUMERIC" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TPROCDTI OF COTRN2AI`</SwmToken> (processing date) to ensure they follow the format <SwmToken path="/app/cbl/COTRN02C.cbl" pos="360:16:20" line-data="                   MOVE &#39;Orig Date should be in format YYYY-MM-DD&#39; TO" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`YYYY-MM-DD`</SwmToken>, setting an error flag and displaying an error message if they do not.
 
 ```cobol
            EVALUATE TRUE
@@ -303,11 +303,11 @@ Similarly, the function validates the format of the <SwmToken path="/app/cbl/COT
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="383" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="383" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The transaction amount is then converted to a numeric value and stored in <SwmToken path="/app/cbl/COTRN02C.cbl" pos="383:3:9" line-data="           COMPUTE WS-TRAN-AMT-N = FUNCTION NUMVAL-C(TRNAMTI OF" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`WS-TRAN-AMT-N`</SwmToken>, which is subsequently moved to <SwmToken path="/app/cbl/COTRN02C.cbl" pos="385:13:19" line-data="           MOVE WS-TRAN-AMT-N TO WS-TRAN-AMT-E" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`WS-TRAN-AMT-E`</SwmToken> and then back to <SwmToken path="/app/cbl/COTRN02C.cbl" pos="386:13:17" line-data="           MOVE WS-TRAN-AMT-E TO TRNAMTI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TRNAMTI OF COTRN2AI`</SwmToken>.
+The transaction amount is then converted to a numeric value and stored in <SwmToken path="/app/cbl/COTRN02C.cbl" pos="383:3:9" line-data="           COMPUTE WS-TRAN-AMT-N = FUNCTION NUMVAL-C(TRNAMTI OF" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`WS-TRAN-AMT-N`</SwmToken>, which is subsequently moved to <SwmToken path="/app/cbl/COTRN02C.cbl" pos="385:13:19" line-data="           MOVE WS-TRAN-AMT-N TO WS-TRAN-AMT-E" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`WS-TRAN-AMT-E`</SwmToken> and then back to <SwmToken path="/app/cbl/COTRN02C.cbl" pos="386:13:17" line-data="           MOVE WS-TRAN-AMT-E TO TRNAMTI OF COTRN2AI" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TRNAMTI OF COTRN2AI`</SwmToken>.
 
 ```cobol
            COMPUTE WS-TRAN-AMT-N = FUNCTION NUMVAL-C(TRNAMTI OF
@@ -320,11 +320,11 @@ The transaction amount is then converted to a numeric value and stored in <SwmTo
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="389" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="389" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The function also validates the original and processing dates by calling the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="389:11:11" line-data="           MOVE TORIGDTI OF COTRN2AI TO CSUTLDTC-DATE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CSUTLDTC`</SwmToken> subroutine, which checks the date format and sets an error flag if the dates are not valid.
+The function also validates the original and processing dates by calling the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="389:11:11" line-data="           MOVE TORIGDTI OF COTRN2AI TO CSUTLDTC-DATE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CSUTLDTC`</SwmToken> subroutine, which checks the date format and sets an error flag if the dates are not valid.
 
 ```cobol
            MOVE TORIGDTI OF COTRN2AI TO CSUTLDTC-DATE
@@ -372,13 +372,13 @@ The function also validates the original and processing dates by calling the <Sw
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="169" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="169" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ## Adding a New Transaction
 
-After validating the inputs, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function checks if the user confirms the transaction. If the user confirms (by entering 'Y' or 'y'), the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="172:3:5" line-data="                   PERFORM ADD-TRANSACTION" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ADD-TRANSACTION`</SwmToken> function is called to add the new transaction. If the user enters 'N', 'n', spaces, or low-values, an error flag is set, and a confirmation message is displayed to prompt the user to confirm the transaction.
+After validating the inputs, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164:1:5" line-data="       PROCESS-ENTER-KEY." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function checks if the user confirms the transaction. If the user confirms (by entering 'Y' or 'y'), the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="172:3:5" line-data="                   PERFORM ADD-TRANSACTION" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ADD-TRANSACTION`</SwmToken> function is called to add the new transaction. If the user enters 'N', 'n', spaces, or low-values, an error flag is set, and a confirmation message is displayed to prompt the user to confirm the transaction.
 
 ```cobol
            EVALUATE CONFIRMI OF COTRN2AI
@@ -400,11 +400,11 @@ After validating the inputs, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="164
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="442" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="442" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="172:3:5" line-data="                   PERFORM ADD-TRANSACTION" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ADD-TRANSACTION`</SwmToken> function begins by setting the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="448:3:5" line-data="           MOVE TRAN-ID     TO WS-TRAN-ID-N" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TRAN-ID`</SwmToken> to high-values and then gets the last transaction ID from the transaction file.
+The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="172:3:5" line-data="                   PERFORM ADD-TRANSACTION" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ADD-TRANSACTION`</SwmToken> function begins by setting the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="448:3:5" line-data="           MOVE TRAN-ID     TO WS-TRAN-ID-N" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TRAN-ID`</SwmToken> to high-values and then gets the last transaction ID from the transaction file.
 
 ```
        ADD-TRANSACTION.
@@ -419,7 +419,7 @@ The <SwmToken path="/app/cbl/COTRN02C.cbl" pos="172:3:5" line-data="            
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="448" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="448" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -450,11 +450,11 @@ Then it generates a new transaction ID and initializes a new transaction record 
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="466" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COTRN02C.cbl" line="466" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-Finally, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="466:3:7" line-data="           PERFORM WRITE-TRANSACT-FILE." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`WRITE-TRANSACT-FILE`</SwmToken> function is called to write the new transaction to the transaction file.
+Finally, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="466:3:7" line-data="           PERFORM WRITE-TRANSACT-FILE." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`WRITE-TRANSACT-FILE`</SwmToken> function is called to write the new transaction to the transaction file.
 
 ```cobol
            PERFORM WRITE-TRANSACT-FILE.

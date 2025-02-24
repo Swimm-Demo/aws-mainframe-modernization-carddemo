@@ -18,13 +18,13 @@ flowchart TB
   H --> P["Close files"]
 ```
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="155" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="155" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ## Processing Transactions
 
-First, the program begins by opening the necessary files for processing. This includes the daily transaction file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="29:3:5" line-data="           SELECT DALYTRAN-FILE ASSIGN TO DALYTRAN" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`DALYTRAN-FILE`</SwmToken>), customer file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="34:3:5" line-data="           SELECT CUSTOMER-FILE ASSIGN TO   CUSTFILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CUSTOMER-FILE`</SwmToken>), cross-reference file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="40:3:5" line-data="           SELECT XREF-FILE ASSIGN TO   XREFFILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`XREF-FILE`</SwmToken>), card file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="46:3:5" line-data="           SELECT CARD-FILE ASSIGN TO   CARDFILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CARD-FILE`</SwmToken>), account file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="52:3:5" line-data="           SELECT ACCOUNT-FILE ASSIGN TO   ACCTFILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACCOUNT-FILE`</SwmToken>), and transaction file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="58:3:5" line-data="           SELECT TRANSACT-FILE ASSIGN TO   TRANFILE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`TRANSACT-FILE`</SwmToken>).
+First, the program begins by opening the necessary files for processing. This includes the daily transaction file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="29:3:5" line-data="           SELECT DALYTRAN-FILE ASSIGN TO DALYTRAN" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DALYTRAN-FILE`</SwmToken>), customer file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="34:3:5" line-data="           SELECT CUSTOMER-FILE ASSIGN TO   CUSTFILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CUSTOMER-FILE`</SwmToken>), cross-reference file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="40:3:5" line-data="           SELECT XREF-FILE ASSIGN TO   XREFFILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`XREF-FILE`</SwmToken>), card file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="46:3:5" line-data="           SELECT CARD-FILE ASSIGN TO   CARDFILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CARD-FILE`</SwmToken>), account file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="52:3:5" line-data="           SELECT ACCOUNT-FILE ASSIGN TO   ACCTFILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACCOUNT-FILE`</SwmToken>), and transaction file (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="58:3:5" line-data="           SELECT TRANSACT-FILE ASSIGN TO   TRANFILE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`TRANSACT-FILE`</SwmToken>).
 
 ```cobol
        MAIN-PARA.
@@ -41,11 +41,11 @@ First, the program begins by opening the necessary files for processing. This in
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="164" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="164" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-Next, the function enters a loop that continues until the end of the daily transaction file is reached. Within this loop, it checks if the end of the file has not been reached (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="165:3:17" line-data="               IF  END-OF-DAILY-TRANS-FILE = &#39;N&#39;" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`END-OF-DAILY-TRANS-FILE = 'N'`</SwmToken>). If so, it performs the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="166:3:9" line-data="                   PERFORM 1000-DALYTRAN-GET-NEXT" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1000-DALYTRAN-GET-NEXT`</SwmToken> operation to read the next transaction record.
+Next, the function enters a loop that continues until the end of the daily transaction file is reached. Within this loop, it checks if the end of the file has not been reached (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="165:3:17" line-data="               IF  END-OF-DAILY-TRANS-FILE = &#39;N&#39;" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`END-OF-DAILY-TRANS-FILE = 'N'`</SwmToken>). If so, it performs the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="166:3:9" line-data="                   PERFORM 1000-DALYTRAN-GET-NEXT" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1000-DALYTRAN-GET-NEXT`</SwmToken> operation to read the next transaction record.
 
 ```cobol
            PERFORM UNTIL END-OF-DAILY-TRANS-FILE = 'Y'
@@ -57,11 +57,11 @@ Next, the function enters a loop that continues until the end of the daily trans
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="167" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="167" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-If the end of the file is still not reached, the transaction record (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="168:3:5" line-data="                       DISPLAY DALYTRAN-RECORD" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`DALYTRAN-RECORD`</SwmToken>) is displayed.&nbsp;
+If the end of the file is still not reached, the transaction record (<SwmToken path="/app/cbl/CBTRN01C.cbl" pos="168:3:5" line-data="                       DISPLAY DALYTRAN-RECORD" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`DALYTRAN-RECORD`</SwmToken>) is displayed.&nbsp;
 
 ```cobol
                    IF  END-OF-DAILY-TRANS-FILE = 'N'
@@ -75,11 +75,11 @@ If the end of the file is still not reached, the transaction record (<SwmToken p
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="172" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="172" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-Following this, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="172:3:7" line-data="                   PERFORM 2000-LOOKUP-XREF" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`2000-LOOKUP-XREF`</SwmToken> operation is performed to look up the card number from the transaction in the cross-reference file (XREF-FILE). The XREF file links card numbers to account IDs.
+Following this, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="172:3:7" line-data="                   PERFORM 2000-LOOKUP-XREF" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`2000-LOOKUP-XREF`</SwmToken> operation is performed to look up the card number from the transaction in the cross-reference file (XREF-FILE). The XREF file links card numbers to account IDs.
 
 ```
                    PERFORM 2000-LOOKUP-XREF
@@ -89,11 +89,11 @@ Following this, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="172:3:7" line-da
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="173" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="173" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-If the operation is successful, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="176:3:7" line-data="                     PERFORM 3000-READ-ACCOUNT" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`3000-READ-ACCOUNT`</SwmToken> operation is performed to get the account ID from the cross-reference record.
+If the operation is successful, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="176:3:7" line-data="                     PERFORM 3000-READ-ACCOUNT" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`3000-READ-ACCOUNT`</SwmToken> operation is performed to get the account ID from the cross-reference record.
 
 ```
                    IF WS-XREF-READ-STATUS = 0
@@ -106,7 +106,7 @@ If the operation is successful, the <SwmToken path="/app/cbl/CBTRN01C.cbl" pos="
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="188" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CBTRN01C.cbl" line="188" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 

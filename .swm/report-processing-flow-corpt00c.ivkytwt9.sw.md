@@ -22,15 +22,15 @@ flowchart TB
 
 ```
 
-## <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken>
+## <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken>
 
-The <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function is responsible for evaluating user input to determine the type of report to generate. It is either, monthly, yearly, or custom.
+The <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> function is responsible for evaluating user input to determine the type of report to generate. It is either, monthly, yearly, or custom.
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="212" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="212" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-If a monthly report is selected, the function sets the report name to 'Monthly' and initializes the start and end dates to cover the entire current month. It then calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job for printing the report.
+If a monthly report is selected, the function sets the report name to 'Monthly' and initializes the start and end dates to cover the entire current month. It then calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job for printing the report.
 
 ```cobol
            EVALUATE TRUE
@@ -66,11 +66,11 @@ If a monthly report is selected, the function sets the report name to 'Monthly' 
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="239" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="239" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-If a yearly report is selected, the function sets the report name to 'Yearly' and initializes the start and end dates to cover the entire current year. It then calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job for printing the report.
+If a yearly report is selected, the function sets the report name to 'Yearly' and initializes the start and end dates to cover the entire current year. It then calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job for printing the report.
 
 ```cobol
                WHEN YEARLYI OF CORPT0AI NOT = SPACES AND LOW-VALUES
@@ -96,11 +96,11 @@ If a yearly report is selected, the function sets the report name to 'Yearly' an
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="256" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="256" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-For a custom report, the function performs a series of validations on the user-provided start and end dates. If all validations pass, it sets the report name to 'Custom' and calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job.
+For a custom report, the function performs a series of validations on the user-provided start and end dates. If all validations pass, it sets the report name to 'Custom' and calls the <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function to submit the batch job.
 
 ```cobol
                WHEN CUSTOMI OF CORPT0AI NOT = SPACES AND LOW-VALUES
@@ -290,7 +290,7 @@ For a custom report, the function performs a series of validations on the user-p
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="437" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="437" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -322,7 +322,7 @@ If no valid report type is selected, the function sets an error message promptin
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="445" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="445" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -347,11 +347,11 @@ Finally, if no errors are detected, the function performs a screen refresh to in
 
 </SwmSnippet>
 
-## <SwmToken path="/app/cbl/CORPT00C.cbl" pos="238:3:9" line-data="                   PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken>
+## <SwmToken path="/app/cbl/CORPT00C.cbl" pos="238:3:9" line-data="                   PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken>
 
-The <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function is called by <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> to handle the actual submission of the batch job.&nbsp;
+The <SwmToken path="/app/cbl/CORPT00C.cbl" pos="435:3:9" line-data="                       PERFORM SUBMIT-JOB-TO-INTRDR" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`SUBMIT-JOB-TO-INTRDR`</SwmToken> function is called by <SwmToken path="/app/cbl/CORPT00C.cbl" pos="186:3:7" line-data="                           PERFORM PROCESS-ENTER-KEY" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`PROCESS-ENTER-KEY`</SwmToken> to handle the actual submission of the batch job.&nbsp;
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="464" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="464" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -395,11 +395,11 @@ It begins by evaluating the user's confirmation input to ensure that the user ha
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="496" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/CORPT00C.cbl" line="496" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-If the confirmation input is valid and no errors are detected, the function proceeds to process the job lines. It loops through the job lines, checking for specific end conditions such as the end-of-file marker or empty lines. Each job line is processed and passed to <SwmToken path="/app/cbl/CORPT00C.cbl" pos="507:3:7" line-data="                   PERFORM WIRTE-JOBSUB-TDQ" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`WIRTE-JOBSUB-TDQ`</SwmToken> which is responsible for writing each line of the JCL to a CICS Transient Data Queue.
+If the confirmation input is valid and no errors are detected, the function proceeds to process the job lines. It loops through the job lines, checking for specific end conditions such as the end-of-file marker or empty lines. Each job line is processed and passed to <SwmToken path="/app/cbl/CORPT00C.cbl" pos="507:3:7" line-data="                   PERFORM WIRTE-JOBSUB-TDQ" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`WIRTE-JOBSUB-TDQ`</SwmToken> which is responsible for writing each line of the JCL to a CICS Transient Data Queue.
 
 ```cobol
                SET END-LOOP-NO TO TRUE

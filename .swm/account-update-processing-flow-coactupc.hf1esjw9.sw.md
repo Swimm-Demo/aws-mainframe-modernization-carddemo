@@ -1,6 +1,7 @@
 ---
 title: Account Update Processing Flow (COACTUPC)
 ---
+
 The document outlines the process of handling and validating account update inputs within a mainframe application. It describes how the program manages different scenarios such as user exit, fresh entry, account data change review, user input processing, user cancellation, changes confirmation, and resetting. The input for this process is the account update details, and the output is the validation status and updated account data.
 
 ```mermaid
@@ -14,7 +15,7 @@ flowchart TB
     E -->|2| F
     subgraph F["2000-DECIDE-ACTION"]
         direction TB
-        G["2000-DECIDE-ACTION"] -->|Cancellation| H["Handle when details are not fetched and user cancels"] 
+        G["2000-DECIDE-ACTION"] -->|Cancellation| H["Handle when details are not fetched and user cancels"]
         G -->|Show details| I["Check changes and ask confirmation if valid"]
         G -->|Not confirmed and PF05| J["Handle changes confirmation and save request"]
         G -->|Changes okayed| K["Show confirmation and reset if needed"]
@@ -24,17 +25,17 @@ flowchart TB
     end
 ```
 
-## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="859:1:3" line-data="       0000-MAIN." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`0000-MAIN`</SwmToken> function
+## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="859:1:3" line-data="       0000-MAIN." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`0000-MAIN`</SwmToken> function
 
-The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="859:1:3" line-data="       0000-MAIN." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`0000-MAIN`</SwmToken> function serves as the primary control flow for the account update process. It handles different states of the application including user navigation, initial entry, data review, and input processing. The function evaluates the current state and directs the program flow to the appropriate handling routine based on user actions.
+The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="859:1:3" line-data="       0000-MAIN." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`0000-MAIN`</SwmToken> function serves as the primary control flow for the account update process. It handles different states of the application including user navigation, initial entry, data review, and input processing. The function evaluates the current state and directs the program flow to the appropriate handling routine based on user actions.
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="921" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="921" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Handling User Exit
 
-First, the program handles the case where the user pressed the PF03 key. This is managed by checking if <SwmToken path="/app/cbl/COACTUPC.cbl" pos="927:3:7" line-data="              WHEN CCARD-AID-PFK03" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CCARD-AID-PFK03`</SwmToken> (indicating the PF03 key press) is true. If so, the program sets the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="932:9:13" line-data="                      MOVE LIT-MENUTRANID  TO CDEMO-TO-TRANID" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="939:9:13" line-data="                      MOVE LIT-MENUPGM     TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-PROGRAM`</SwmToken> to either the main menu or the calling program, depending on the values of <SwmToken path="/app/cbl/COACTUPC.cbl" pos="930:3:7" line-data="                   IF CDEMO-FROM-TRANID    EQUAL LOW-VALUES" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-FROM-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="966:3:7" line-data="              WHEN CDEMO-FROM-PROGRAM   EQUAL LIT-MENUPGM" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-FROM-PROGRAM`</SwmToken>.
+First, the program handles the case where the user pressed the PF03 key. This is managed by checking if <SwmToken path="/app/cbl/COACTUPC.cbl" pos="927:3:7" line-data="              WHEN CCARD-AID-PFK03" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CCARD-AID-PFK03`</SwmToken> (indicating the PF03 key press) is true. If so, the program sets the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="932:9:13" line-data="                      MOVE LIT-MENUTRANID  TO CDEMO-TO-TRANID" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="939:9:13" line-data="                      MOVE LIT-MENUPGM     TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-PROGRAM`</SwmToken> to either the main menu or the calling program, depending on the values of <SwmToken path="/app/cbl/COACTUPC.cbl" pos="930:3:7" line-data="                   IF CDEMO-FROM-TRANID    EQUAL LOW-VALUES" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-FROM-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="966:3:7" line-data="              WHEN CDEMO-FROM-PROGRAM   EQUAL LIT-MENUPGM" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-FROM-PROGRAM`</SwmToken>.
 
 ```cobol
            EVALUATE TRUE
@@ -58,11 +59,11 @@ First, the program handles the case where the user pressed the PF03 key. This is
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="956" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="956" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The value in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="932:9:13" line-data="                      MOVE LIT-MENUTRANID  TO CDEMO-TO-TRANID" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="939:9:13" line-data="                      MOVE LIT-MENUPGM     TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-PROGRAM`</SwmToken> are used in the CICS command to transfers control to the either the main menu or the current program.
+The value in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="932:9:13" line-data="                      MOVE LIT-MENUTRANID  TO CDEMO-TO-TRANID" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-TRANID`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="939:9:13" line-data="                      MOVE LIT-MENUPGM     TO CDEMO-TO-PROGRAM" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CDEMO-TO-PROGRAM`</SwmToken> are used in the CICS command to transfers control to the either the main menu or the current program.
 
 ```cobol
                    EXEC CICS XCTL
@@ -75,13 +76,13 @@ The value in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="932:9:13" line-data="  
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="964" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="964" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Handling Fresh Entry
 
-Next, the program handles the fresh entry scenario. This occurs when the user first enters the program or comes from the menu. The program shows the initial search screen using <SwmToken path="/app/cbl/COACTUPC.cbl" pos="969:3:7" line-data="                   PERFORM 3000-SEND-MAP THRU" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`3000-SEND-MAP`</SwmToken>.
+Next, the program handles the fresh entry scenario. This occurs when the user first enters the program or comes from the menu. The program shows the initial search screen using <SwmToken path="/app/cbl/COACTUPC.cbl" pos="969:3:7" line-data="                   PERFORM 3000-SEND-MAP THRU" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`3000-SEND-MAP`</SwmToken>.
 
 ```cobol
               WHEN ACUP-DETAILS-NOT-FETCHED
@@ -100,13 +101,13 @@ Next, the program handles the fresh entry scenario. This occurs when the user fi
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="979" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="979" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Handling Account Data Change Review
 
-Then, the program handles the scenario where account data changes have been reviewed and either successfully completed (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2625:3:11" line-data="              WHEN ACUP-CHANGES-OKAYED-AND-DONE" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OKAYED-AND-DONE`</SwmToken> ) or failed (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="980:3:7" line-data="              WHEN ACUP-CHANGES-FAILED" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-FAILED`</SwmToken>`)`. In either case, it resets the program to start fresh and shows the initial screen to the user (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="969:3:7" line-data="                   PERFORM 3000-SEND-MAP THRU" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`3000-SEND-MAP`</SwmToken>) and prepares for the next user action.
+Then, the program handles the scenario where account data changes have been reviewed and either successfully completed (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2625:3:11" line-data="              WHEN ACUP-CHANGES-OKAYED-AND-DONE" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OKAYED-AND-DONE`</SwmToken> ) or failed (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="980:3:7" line-data="              WHEN ACUP-CHANGES-FAILED" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-FAILED`</SwmToken>`)`. In either case, it resets the program to start fresh and shows the initial screen to the user (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="969:3:7" line-data="                   PERFORM 3000-SEND-MAP THRU" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`3000-SEND-MAP`</SwmToken>) and prepares for the next user action.
 
 ```cobol
               WHEN ACUP-CHANGES-OKAYED-AND-DONE
@@ -126,13 +127,13 @@ Then, the program handles the scenario where account data changes have been revi
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="996" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="996" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Processing User Input
 
-Finally, for all other cases, the program processes user input, decides what action to take, and shows the appropriate screen. This is done by performing the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="997:3:7" line-data="                   PERFORM 1000-PROCESS-INPUTS" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="999:3:7" line-data="                   PERFORM 2000-DECIDE-ACTION" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> functions.
+Finally, for all other cases, the program processes user input, decides what action to take, and shows the appropriate screen. This is done by performing the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="997:3:7" line-data="                   PERFORM 1000-PROCESS-INPUTS" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> and <SwmToken path="/app/cbl/COACTUPC.cbl" pos="999:3:7" line-data="                   PERFORM 2000-DECIDE-ACTION" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> functions.
 
 ```cobol
               WHEN OTHER
@@ -149,13 +150,13 @@ Finally, for all other cases, the program processes user input, decides what act
 
 </SwmSnippet>
 
-## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function
+## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1040" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1040" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
-The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function starts by calling the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1039:1:5" line-data="       1100-RECEIVE-MAP." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1100-RECEIVE-MAP`</SwmToken> function. This function starts by receiving data from the screen for the CACTUPA map (stored in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1040:9:11" line-data="           EXEC CICS RECEIVE MAP(LIT-THISMAP)" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`LIT-THISMAP`</SwmToken>). It then processes and validates each field, and creates a complete new record of all the fields in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="757:3:7" line-data="          05 ACUP-NEW-DETAILS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-NEW-DETAILS`</SwmToken>.
+The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function starts by calling the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1039:1:5" line-data="       1100-RECEIVE-MAP." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1100-RECEIVE-MAP`</SwmToken> function. This function starts by receiving data from the screen for the CACTUPA map (stored in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1040:9:11" line-data="           EXEC CICS RECEIVE MAP(LIT-THISMAP)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`LIT-THISMAP`</SwmToken>). It then processes and validates each field, and creates a complete new record of all the fields in <SwmToken path="/app/cbl/COACTUPC.cbl" pos="757:3:7" line-data="          05 ACUP-NEW-DETAILS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-NEW-DETAILS`</SwmToken>.
 
 ```cobol
            EXEC CICS RECEIVE MAP(LIT-THISMAP)
@@ -170,9 +171,9 @@ The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000
 
 </SwmSnippet>
 
-The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function then calls the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1429:1:7" line-data="       1200-EDIT-MAP-INPUTS." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`1200-EDIT-MAP-INPUTS`</SwmToken> function which is the main validation routine for account updates.
+The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1025:1:5" line-data="       1000-PROCESS-INPUTS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1000-PROCESS-INPUTS`</SwmToken> function then calls the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="1429:1:7" line-data="       1200-EDIT-MAP-INPUTS." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`1200-EDIT-MAP-INPUTS`</SwmToken> function which is the main validation routine for account updates.
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1433" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1433" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -199,7 +200,7 @@ This block handles processing for new records.
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1460" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1460" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -221,7 +222,7 @@ For existing records, it compares the original (old) values with the new input v
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1470" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="1470" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -259,17 +260,17 @@ For changed fields, it validates them.
 
 </SwmSnippet>
 
-## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2562:1:5" line-data="       2000-DECIDE-ACTION." repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> function
+## <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2562:1:5" line-data="       2000-DECIDE-ACTION." repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> function
 
-The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="999:3:7" line-data="                   PERFORM 2000-DECIDE-ACTION" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> function manages the business logic for account updates by evaluating user actions and current program state.&nbsp;
+The <SwmToken path="/app/cbl/COACTUPC.cbl" pos="999:3:7" line-data="                   PERFORM 2000-DECIDE-ACTION" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`2000-DECIDE-ACTION`</SwmToken> function manages the business logic for account updates by evaluating user actions and current program state.&nbsp;
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2562" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2562" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Handling User Cancellation
 
-The function first handles the scenario where details are not fetched (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2568:3:9" line-data="              WHEN ACUP-DETAILS-NOT-FETCHED" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-DETAILS-NOT-FETCHED`</SwmToken>) and the user cancels (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2572:3:7" line-data="              WHEN CCARD-AID-PFK12" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`CCARD-AID-PFK12`</SwmToken>). In this case, the function checks if the account filter is valid (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2573:3:7" line-data="                 IF  FLG-ACCTFILTER-ISVALID" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`FLG-ACCTFILTER-ISVALID`</SwmToken>) and if so, it reads the account details and sets the flag to show details if the customer is found in the master file.
+The function first handles the scenario where details are not fetched (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2568:3:9" line-data="              WHEN ACUP-DETAILS-NOT-FETCHED" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-DETAILS-NOT-FETCHED`</SwmToken>) and the user cancels (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2572:3:7" line-data="              WHEN CCARD-AID-PFK12" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`CCARD-AID-PFK12`</SwmToken>). In this case, the function checks if the account filter is valid (<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2573:3:7" line-data="                 IF  FLG-ACCTFILTER-ISVALID" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`FLG-ACCTFILTER-ISVALID`</SwmToken>) and if so, it reads the account details and sets the flag to show details if the customer is found in the master file.
 
 ```
        2000-DECIDE-ACTION.
@@ -297,13 +298,13 @@ The function first handles the scenario where details are not fetched (<SwmToken
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2585" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2585" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Checking Changes and Asking for Confirmation
 
-If not, it checks if the<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2585:3:7" line-data="              WHEN ACUP-SHOW-DETAILS" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-SHOW-DETAILS`</SwmToken> flag is true which indicates the program should display account details to the user. It checks for input errors or if no changes are detected. If neither condition is met, it sets the flag <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2602:3:11" line-data="              WHEN ACUP-CHANGES-OK-NOT-CONFIRMED" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OK-NOT-CONFIRMED`</SwmToken> to true.
+If not, it checks if the<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2585:3:7" line-data="              WHEN ACUP-SHOW-DETAILS" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-SHOW-DETAILS`</SwmToken> flag is true which indicates the program should display account details to the user. It checks for input errors or if no changes are detected. If neither condition is met, it sets the flag <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2602:3:11" line-data="              WHEN ACUP-CHANGES-OK-NOT-CONFIRMED" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OK-NOT-CONFIRMED`</SwmToken> to true.
 
 ```cobol
               WHEN ACUP-SHOW-DETAILS
@@ -319,13 +320,13 @@ If not, it checks if the<SwmToken path="/app/cbl/COACTUPC.cbl" pos="2585:3:7" li
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2602" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2602" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
 ### Handling Changes Confirmation
 
-Another case is when the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2602:3:11" line-data="              WHEN ACUP-CHANGES-OK-NOT-CONFIRMED" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OK-NOT-CONFIRMED`</SwmToken> flag is true and the PF05 key is pressed, which indicates that the changes were confirmed. This case performs the write processing, and depending on the outcome, it sets various flags to indicate whether the changes were successfully saved, failed, or if there was a lock error.
+Another case is when the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2602:3:11" line-data="              WHEN ACUP-CHANGES-OK-NOT-CONFIRMED" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`ACUP-CHANGES-OK-NOT-CONFIRMED`</SwmToken> flag is true and the PF05 key is pressed, which indicates that the changes were confirmed. This case performs the write processing, and depending on the outcome, it sets various flags to indicate whether the changes were successfully saved, failed, or if there was a lock error.
 
 ```cobol
               WHEN ACUP-CHANGES-OK-NOT-CONFIRMED
@@ -348,7 +349,7 @@ Another case is when the <SwmToken path="/app/cbl/COACTUPC.cbl" pos="2602:3:11" 
 
 </SwmSnippet>
 
-<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2625" repo-id="Z2l0aHViJTNBJTNBYXdzLW1haW5mcmFtZS1tb2Rlcm5pemF0aW9uLWNhcmRkZW1vJTNBJTNBU3dpbW0tRGVtbw==">
+<SwmSnippet path="/app/cbl/COACTUPC.cbl" line="2625" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
 
 ---
 
@@ -373,6 +374,6 @@ The last case, if `ACUP-CHANGES-OKAYED-AND-DONE` is true, the program shows conf
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
