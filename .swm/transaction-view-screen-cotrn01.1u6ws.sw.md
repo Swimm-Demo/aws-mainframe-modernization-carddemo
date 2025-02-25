@@ -33,106 +33,117 @@ ENTER=Fetch  F3=Back  F4=Clear  F5=Browse Tran.
 
 ## Fields
 
-### Transaction ID Display (TRNID)
-
-### Transaction ID Input Field (TRNIDIN)
-
-- Length: 16 characters
-- Required field
-- Underlined, green color
-- Initial value is a blank space
-- Validations: Cannot be empty or contain low-values
-
-### Card Number Display (CARDNUM)
-
-- Length: 16 characters
-- Read-only field
-- Color: Blue
-- Initial value is a blank space
-
-### Type Code Display (TTYPCD)
-
-- Length: 16 characters
-- Read-only field
-- Color: Blue
-- Initial value is a blank space
-
-### Category Code Display (TCATCD)
-
-- Length: 2 characters
-- Read-only field
-- Color: Blue
-- Initial value is a blank space
-
-### Source Display (TRNSRC)
+### Transaction Name (TRNNAME)
 
 - Length: 4 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Description Display (TDESC)
+### Current Date (CURDATE)
+
+- Length: 8 characters
+- Display-only field
+- Color: Blue
+- Format: mm/dd/yy
+
+### Program Name (PGMNAME)
+
+- Length: 8 characters
+- Display-only field
+- Color: Blue
+- Associated document: <SwmLink doc-title="View Transaction (COTRN01C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/view-transaction-cotrn01c.7an4bkg7.sw.md">[View Transaction (COTRN01C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/7an4bkg7)</SwmLink>
+
+### Current Time (CURTIME)
+
+- Length: 8 characters
+- Display-only field
+- Color: Blue
+- Format: hh:mm:ss
+
+### Transaction ID Input (TRNIDIN)
+
+- Length: 16 characters
+- Input field
+- Color: Green
+- Underlined
+
+### Transaction ID (TRNID)
+
+- Length: 16 characters
+- Display-only field
+- Color: Blue
+
+### Card Number (CARDNUM)
+
+- Length: 16 characters
+- Display-only field
+- Color: Blue
+
+### Type Code (TTYPCD)
+
+- Length: 2 characters
+- Display-only field
+- Color: Blue
+
+### Category Code (TCATCD)
+
+- Length: 4 characters
+- Display-only field
+- Color: Blue
+
+### Source (TRNSRC)
 
 - Length: 10 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Amount Display (TRNAMT)
+### Description (TDESC)
 
 - Length: 60 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Original Date Display (TORIGDT)
+### Amount (TRNAMT)
 
 - Length: 12 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Processing Date Display (TPROCDT)
+### Original Date (TORIGDT)
 
 - Length: 10 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Merchant ID Display (MID)
+### Processing Date (TPROCDT)
 
 - Length: 10 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Merchant Name Display (MNAME)
+### Merchant ID (MID)
 
 - Length: 9 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Merchant City Display (MCITY)
+### Merchant Name (MNAME)
 
 - Length: 30 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Merchant Zip Display (MZIP)
+### Merchant City (MCITY)
 
 - Length: 25 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
-### Error Message Display (ERRMSG)
+### Merchant Zip (MZIP)
 
 - Length: 10 characters
-- Read-only field
+- Display-only field
 - Color: Blue
-- Initial value is a blank space
 
 &nbsp;
 

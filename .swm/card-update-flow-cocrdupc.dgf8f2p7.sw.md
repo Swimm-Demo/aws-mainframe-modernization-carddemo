@@ -3,6 +3,12 @@ title: Card Update Flow (COCRDUPC)
 ---
 The program allows users to update credit card details through a screen interface, managing the display of relevant information. The document outlines the steps taken by the program to handle user exits, fetch card details, request keys for updates, handle card data changes, and process user inputs.
 
+# Program Screens
+
+- <SwmLink doc-title="Card Update Screen (COCRDUP)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/card-update-screen-cocrdup.i9w2x.sw.md">[Card Update Screen (COCRDUP)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/i9w2x)</SwmLink>
+
+# Program Drill Down
+
 ```mermaid
 flowchart TB
   A["0000-MAIN"] --> B["Handle user exit condition"]
@@ -20,7 +26,7 @@ flowchart TB
   end
 ```
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="429" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="429" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -85,7 +91,7 @@ In this case the program determines the next transaction and program to call by 
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="477" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="477" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -121,7 +127,7 @@ The next case checks if the user has entered the program from the credit card li
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="498" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="498" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -150,7 +156,7 @@ If the program is entered freshly and the card details have not been fetched (<S
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="512" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="512" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -182,7 +188,7 @@ When the card data changes are reviewed and either successfully completed (<SwmT
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="529" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="529" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -212,7 +218,7 @@ Finally, if none of the previous conditions are met, the program processes the u
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="578" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="578" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -236,7 +242,7 @@ The <SwmToken path="/app/cbl/COCRDUPC.cbl" pos="536:3:7" line-data="            
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="641" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="641" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -270,7 +276,7 @@ Following this, the <SwmToken path="/app/cbl/COCRDUPC.cbl" pos="536:3:7" line-da
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="949" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="949" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -303,7 +309,7 @@ The first condition checks if this is a first entry or if the changes where canc
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="967" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="967" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -327,7 +333,7 @@ The second condition checks if the screen is already showing card details. If ev
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="984" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="984" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -358,7 +364,7 @@ When the changes have been validated and are ready for saving and the user has p
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="1008" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="1008" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 
@@ -382,7 +388,7 @@ If the changes are confirmed and done, the program sets the flag to show the det
 
 </SwmSnippet>
 
-<SwmSnippet path="app/cbl/COCRDUPC.cbl" line="1019" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+<SwmSnippet path="/app/cbl/COCRDUPC.cbl" line="1019" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">
 
 ---
 

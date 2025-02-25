@@ -11,6 +11,10 @@ graph TD
 
 ```
 
+# Program Screens
+
+- <SwmLink doc-title="Transaction View Screen (COTRN01)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/transaction-view-screen-cotrn01.1u6ws.sw.md">[Transaction View Screen (COTRN01)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/1u6ws)</SwmLink>
+
 # Program Drill Down
 
 ```mermaid

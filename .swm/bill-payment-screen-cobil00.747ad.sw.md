@@ -1,6 +1,7 @@
 ---
 title: Bill Payment Screen (COBIL00)
 ---
+
 The Bill Payment screen (COBIL00) provides a straightforward interface for customers to view and pay their credit card balance. After entering their account ID, customers can see their current balance and choose whether to process a payment.
 
 ## Screen Preview
@@ -30,38 +31,55 @@ ENTER=Continue  F3=Back  F4=Clear
 
 ## Fields
 
-### Current Date (CURDATE)
-
 ### Transaction Name (TRNNAME)
 
-This field displays the transaction name, which is fixed as 'CB00'. It is a non-editable field with a length of 4 characters and is displayed in blue color.
+- Length: 4 characters
+- Color: Blue
+- Fixed information
+
+### Current Date (CURDATE)
+
+- Length: 8 characters
+- Color: Blue
+- Initial value: 'mm/dd/yy'
+- Fixed information
 
 ### Program Name (PGMNAME)
 
-This field shows the current date in the format 'mm/dd/yy'. It is a non-editable field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Blue
+- Fixed information
+- Associated document: <SwmLink doc-title="Bill Payment (COBIL00C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/bill-payment-cobil00c.vqxk83ji.sw.md">[Bill Payment (COBIL00C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/vqxk83ji)</SwmLink>
 
 ### Current Time (CURTIME)
 
-This field displays the program name, which is fixed as 'COBIL00C'. It is a non-editable field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Blue
+- Initial value: 'hh:mm:ss'
+- Fixed information
 
 ### Account ID Input (ACTIDIN)
 
-This field shows the current time in the format 'hh:mm:ss'. It is a non-editable field with a length of 8 characters and is displayed in blue color.
+- Length: 11 characters
+- Color: Green
+- Underlined
+- User input required
 
 ### Current Balance (CURBAL)
 
-This field is used to enter the account ID. It is an editable field with a length of 11 characters, underlined, and displayed in green color. The field is mandatory and cannot be left empty.
+- Length: 14 characters
+- Color: Blue
+- Fixed information
 
 ### Payment Confirmation (CONFIRM)
 
-This field displays the current balance of the account. It is a non-editable field with a length of 14 characters and is displayed in blue color.
-
-### Error/Status Message (ERRMSG)
-
-This field is used to confirm the payment. It is an editable field with a length of 1 character, underlined, and displayed in green color. The valid inputs are 'Y' or 'N', and the field is case-insensitive.
+- Length: 1 character
+- Color: Green
+- Underlined
+- User input required (Y/N)
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
-<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

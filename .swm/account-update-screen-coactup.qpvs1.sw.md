@@ -1,6 +1,7 @@
 ---
 title: Account Update Screen (COACTUP)
 ---
+
 The Account Update screen (COACTUP) allows users to update various details related to an account, including account status, credit limits, balance, customer details, and more. This screen is essential for maintaining up-to-date account information and ensuring accurate data management.
 
 ## Screen Preview
@@ -45,17 +46,17 @@ Prog:     Time: hh:mm:ss
 
      First Name
 
-     Middle Name: 
+     Middle Name:
 
-     Last Name : 
+     Last Name :
 
      Address:
 
-     State 
+     State
 
      Zip
 
-     City 
+     City
 
      Country
 
@@ -76,334 +77,261 @@ ENTER=Process F3=Exit  F5=Save  F12=Cancel
 
 ## Fields
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="50" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+### Transaction Name (TRNNAME)
 
----
+- Length: 4 characters
+- Fixed field
+- Blue color
+- Positioned at row 1, column 7
 
-### Account Number
+### Current Date (CURDATE)
 
-The Account Number field is an 11-character input field that is underlined. It is used to input the account number for the account being updated. This field is mandatory and must be numeric. If the account number is not provided or is invalid, an error message will be displayed.
+- Length: 8 characters
+- Fixed field
+- Blue color
+- Positioned at row 1, column 71
+- Initial value: 'mm/dd/yy'
 
-```bms
-               POS=(1,71),                                             -
-               INITIAL='mm/dd/yy'
-        DFHMDF ATTRB=(ASKIP,NORM),                                     -
-```
+### Program Name (PGMNAME)
 
----
+- Length: 8 characters
+- Fixed field
+- Blue color
+- Positioned at row 2, column 7
+- Associated document: <SwmLink doc-title="Account Update Processing Flow (COACTUPC)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/account-update-processing-flow-coactupc.hf1esjw9.sw.md">[Account Update Processing Flow (COACTUPC)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/hf1esjw9)</SwmLink>
 
-</SwmSnippet>
+### Current Time (CURTIME)
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="54" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+- Length: 8 characters
+- Fixed field
+- Blue color
+- Positioned at row 2, column 71
+- Initial value: 'hh:mm:ss'
 
----
+### Account Number (ACCTSID)
 
-### Active Status
+- Length: 11 characters
+- Input field
+- Underlined
+- Positioned at row 5, column 38
 
-The Active Status field is a single-character input field that accepts 'Y' or 'N' to indicate whether the account is active. This field is underlined and must be provided. If the input is not 'Y' or 'N', an error message will be displayed.
+### Active Status (ACSTTUS)
 
-```bms
-               LENGTH=5,                                               -
-               POS=(2,1),                                              -
-               INITIAL='Prog:'
-```
+- Length: 1 character
+- Input field
+- Underlined
+- Positioned at row 5, column 70
 
----
+### Opened Date (OPNYEAR, OPNMON, OPNDAY)
 
-</SwmSnippet>
+- Year: 4 characters, Month: 2 characters, Day: 2 characters
+- Input fields
+- Underlined
+- Positioned at row 6, columns 17, 24, 29 respectively
+- Separated by hyphens
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="58" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+### Credit Limit (ACRDLIM)
 
----
+- Length: 15 characters
+- Input field
+- Underlined
+- Positioned at row 6, column 61
 
-### Open Date
+### Expiry Date (EXPYEAR, EXPMON, EXPDAY)
 
-The Open Date field consists of three parts: year (4 characters), month (2 characters), and day (2 characters). Each part is underlined and must be provided. The date must be in the format 'YYYY-MM-DD'. If any part of the date is not provided or is invalid, an error message will be displayed.
+- Year: 4 characters, Month: 2 characters, Day: 2 characters
+- Input fields
+- Underlined
+- Positioned at row 7, columns 17, 24, 29 respectively
+- Separated by hyphens
 
-```bms
-               COLOR=BLUE,                                             -
-               LENGTH=8,                                               -
-               POS=(2,7)
-TITLE02 DFHMDF ATTRB=(ASKIP,NORM),                                     -
-               COLOR=YELLOW,                                           -
-               LENGTH=40,                                              -
-               POS=(2,21)
-```
+### Cash Credit Limit (ACSHLIM)
 
----
+- Length: 15 characters
+- Input field
+- Underlined
+- Positioned at row 7, column 61
 
-</SwmSnippet>
+### Reissue Date (RISYEAR, RISMON, RISDAY)
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="66" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+- Year: 4 characters, Month: 2 characters, Day: 2 characters
+- Input fields
+- Underlined
+- Positioned at row 8, columns 17, 24, 29 respectively
+- Separated by hyphens
 
----
+### Current Balance (ACURBAL)
 
-### Credit Limit
+- Length: 15 characters
+- Input field
+- Underlined
+- Positioned at row 8, column 61
 
-The Credit Limit field is a 15-character input field that is underlined. It is used to input the credit limit for the account. This field must be numeric and provided. If the credit limit is not provided or is invalid, an error message will be displayed.
+### Current Cycle Credit (ACRCYCR)
 
-```bms
-               COLOR=BLUE,                                             -
-               LENGTH=5,                                               -
-               POS=(2,65),                                             -
-```
+- Length: 15 characters
+- Input field
+- Underlined
+- Positioned at row 9, column 61
 
----
+### Account Group (AADDGRP)
 
-</SwmSnippet>
+- Length: 10 characters
+- Input field
+- Underlined
+- Positioned at row 10, column 23
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="70" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+### Current Cycle Debit (ACRCYDB)
 
----
+- Length: 15 characters
+- Input field
+- Underlined
+- Positioned at row 10, column 61
 
-### Expiry Date
+### Customer ID (ACSTNUM)
 
-The Expiry Date field consists of three parts: year (4 characters), month (2 characters), and day (2 characters). Each part is underlined and must be provided. The date must be in the format 'YYYY-MM-DD'. If any part of the date is not provided or is invalid, an error message will be displayed.
+- Length: 9 characters
+- Input field
+- Underlined
+- Positioned at row 12, column 23
 
-```bms
-CURTIME DFHMDF ATTRB=(ASKIP,NORM),                                     -
-               COLOR=BLUE,                                             -
-               LENGTH=8,                                               -
-               POS=(2,71),                                             -
-               INITIAL='hh:mm:ss'
-        DFHMDF COLOR=NEUTRAL,                                          -
-               LENGTH=14,                                              -
-```
+### SSN (ACTSSN1, ACTSSN2, ACTSSN3)
 
----
+- Format: 999-99-9999
+- Input fields
+- Underlined
+- Positioned at row 12, columns 55, 61, 66 respectively
+- Separated by hyphens
 
-</SwmSnippet>
+### Date of Birth (DOBYEAR, DOBMON, DOBDAY)
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="78" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+- Year: 4 characters, Month: 2 characters, Day: 2 characters
+- Input fields
+- Underlined
+- Positioned at row 13, columns 23, 30, 35 respectively
+- Separated by hyphens
 
----
+### FICO Score (ACSTFCO)
 
-### Cash Credit Limit
+- Length: 3 characters
+- Input field
+- Underlined
+- Positioned at row 13, column 62
 
-The Cash Credit Limit field is a 15-character input field that is underlined. It is used to input the cash credit limit for the account. This field must be numeric and provided. If the cash credit limit is not provided or is invalid, an error message will be displayed.
+### First Name (ACSFNAM)
 
-```bms
-               INITIAL='Update Account'
-        DFHMDF ATTRB=(ASKIP,NORM),                                     -
-               COLOR=TURQUOISE,                                        -
-```
+- Length: 25 characters
+- Input field
+- Underlined
+- Positioned at row 15, column 1
 
----
+### Middle Name (ACSMNAM)
 
-</SwmSnippet>
+- Length: 25 characters
+- Input field
+- Underlined
+- Positioned at row 15, column 28
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="82" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+### Last Name (ACSLNAM)
 
----
+- Length: 25 characters
+- Input field
+- Underlined
+- Positioned at row 15, column 55
 
-### Reissue Date
+### Address Line 1 (ACSADL1)
 
-The Reissue Date field consists of three parts: year (4 characters), month (2 characters), and day (2 characters). Each part is underlined and must be provided. The date must be in the format 'YYYY-MM-DD'. If any part of the date is not provided or is invalid, an error message will be displayed.
+- Length: 50 characters
+- Input field
+- Underlined
+- Positioned at row 16, column 10
 
-```bms
-               POS=(5,19),                                             -
-               INITIAL='Account Number :'
-ACCTSID DFHMDF ATTRB=(IC,UNPROT),                                      -
-               HILIGHT=UNDERLINE,                                      -
-               LENGTH=11,                                              -
-               POS=(5,38)
-        DFHMDF LENGTH=0,                                               -
-```
+### State (ACSSTTE)
 
----
+- Length: 2 characters
+- Input field
+- Underlined
+- Positioned at row 16, column 73
 
-</SwmSnippet>
+### Address Line 2 (ACSADL2)
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="90" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+- Length: 50 characters
+- Input field
+- Underlined
+- Positioned at row 17, column 10
 
----
+### Zip Code (ACSZIPC)
 
-### Current Balance
+- Length: 5 characters
+- Input field
+- Underlined
+- Positioned at row 17, column 73
 
-The Current Balance field is a 15-character input field that is underlined. It is used to input the current balance for the account. This field must be numeric and provided. If the current balance is not provided or is invalid, an error message will be displayed.
+### City (ACSCITY)
 
-```bms
-        DFHMDF COLOR=TURQUOISE,                                        -
-               LENGTH=12,                                              -
-               POS=(5,57),                                             -
-```
+- Length: 50 characters
+- Input field
+- Underlined
+- Positioned at row 18, column 10
 
----
+### Country (ACSCTRY)
 
-</SwmSnippet>
+- Length: 3 characters
+- Input field
+- Underlined
+- Positioned at row 18, column 73
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="94" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+### Phone 1 (ACSPH1A, ACSPH1B, ACSPH1C)
 
----
+- Format: 3-3-4
+- Input fields
+- Underlined
+- Positioned at row 19, columns 10, 14, 18 respectively
 
-### Current Cycle Credit
+### Government Issued ID Reference (ACSGOVT)
 
-The Current Cycle Credit field is a 15-character input field that is underlined. It is used to input the current cycle credit for the account. This field must be numeric and provided. If the current cycle credit is not provided or is invalid, an error message will be displayed.
+- Length: 20 characters
+- Input field
+- Underlined
+- Positioned at row 19, column 58
 
-```bms
-ACSTTUS DFHMDF ATTRB=(UNPROT),                                         -
-               HILIGHT=UNDERLINE,                                      -
-               LENGTH=1,                                               -
-```
+### Phone 2 (ACSPH2A, ACSPH2B, ACSPH2C)
 
----
+- Format: 3-3-4
+- Input fields
+- Underlined
+- Positioned at row 20, columns 10, 14, 18 respectively
 
-</SwmSnippet>
+### EFT Account ID (ACSEFTC)
 
-<SwmSnippet path="/app/bms/COACTUP.bms" line="98" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
+- Length: 10 characters
+- Input field
+- Underlined
+- Positioned at row 20, column 41
 
----
+### Primary Card Holder (ACSPFLG)
 
-### Account Group
+- Length: 1 character
+- Input field
+- Underlined
+- Positioned at row 20, column 78
 
-The Account Group field is a 10-character input field that is underlined. It is used to input the account group for the account. This field must be provided. If the account group is not provided, an error message will be displayed.
+### Information Message (INFOMSG)
 
-```bms
-        DFHMDF LENGTH=0,                                               -
-               POS=(5,72)
-        DFHMDF COLOR=TURQUOISE,                                        -
-```
+- Length: 45 characters
+- Display field
+- Neutral color
+- Positioned at row 22, column 23
 
----
+### Error Message (ERRMSG)
 
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="102" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### Current Cycle Debit
-
-The Current Cycle Debit field is a 15-character input field that is underlined. It is used to input the current cycle debit for the account. This field must be numeric and provided. If the current cycle debit is not provided or is invalid, an error message will be displayed.
-
-```bms
-               POS=(6,8),                                              -
-               INITIAL='Opened :'
-OPNYEAR DFHMDF ATTRB=(FSET,UNPROT),                                    -
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="106" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### Customer ID
-
-The Customer ID field is a 9-character input field that is underlined. It is used to input the customer ID for the account. This field is not editable and is used for display purposes only.
-
-```bms
-               JUSTIFY=(RIGHT),                                        -
-               LENGTH=4,                                               -
-               POS=(6,17)
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="110" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### Social Security Number
-
-The Social Security Number (SSN) field consists of three parts: first part (3 characters), second part (2 characters), and third part (4 characters). Each part is underlined and must be provided. The SSN must be in the format '999-99-9999'. If any part of the SSN is not provided or is invalid, an error message will be displayed.
-
-```bms
-               POS=(6,22),                                             -
-               INITIAL='-'
-OPNMON  DFHMDF ATTRB=(UNPROT),                                         -
-               HILIGHT=UNDERLINE,                                      -
-               JUSTIFY=(RIGHT),                                        -
-               LENGTH=2,                                               -
-               POS=(6,24)
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="118" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### Date of Birth
-
-The Date of Birth field consists of three parts: year (4 characters), month (2 characters), and day (2 characters). Each part is underlined and must be provided. The date must be in the format 'YYYY-MM-DD'. If any part of the date is not provided or is invalid, an error message will be displayed.
-
-```bms
-               POS=(6,27),                                             -
-               INITIAL='-'
-OPNDAY  DFHMDF ATTRB=(UNPROT),                                         -
-               HILIGHT=UNDERLINE,                                      -
-               JUSTIFY=(RIGHT),                                        -
-               LENGTH=2,                                               -
-               POS=(6,29)
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="126" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### FICO Score
-
-The FICO Score field is a 3-character input field that is underlined. It is used to input the FICO score for the customer. This field must be numeric and provided. If the FICO score is not provided or is invalid, an error message will be displayed.
-
-```bms
-               POS=(6,32)
-        DFHMDF ATTRB=(ASKIP,NORM),                                     -
-               COLOR=TURQUOISE,                                        -
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="130" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### First Name
-
-The First Name field is a 25-character input field that is underlined. It is used to input the first name of the customer. This field must be provided and can only contain alphabets and spaces. If the first name is not provided or contains invalid characters, an error message will be displayed.
-
-```bms
-               POS=(6,39),                                             -
-               INITIAL='Credit Limit        :'
-ACRDLIM DFHMDF ATTRB=(FSET,UNPROT),                                    -
-```
-
----
-
-</SwmSnippet>
-
-<SwmSnippet path="/app/bms/COACTUP.bms" line="134" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v">
-
----
-
-### Middle Name
-
-The Middle Name field is a 25-character input field that is underlined. It is used to input the middle name of the customer. This field is optional and can only contain alphabets and spaces. If the middle name contains invalid characters, an error message will be displayed.
-
-```bms
-               LENGTH=15,                                              -
-               POS=(6,61)
-        DFHMDF LENGTH=0,                                               -
-```
-
----
-
-</SwmSnippet>
+- Length: 78 characters
+- Display field
+- Red color
+- Positioned at row 23, column 1
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
-<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

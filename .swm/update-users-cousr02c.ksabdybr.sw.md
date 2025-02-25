@@ -1,8 +1,13 @@
 ---
 title: Update Users (COUSR02C)
 ---
-
 <SwmToken path="/app/cbl/COUSR02C.cbl" pos="2:7:7" line-data="      * Program     : COUSR02C.CBL">`COUSR02C`</SwmToken> manages the update screen interface for modifying existing user records in the USRSEC file.
+
+# Program Screens
+
+- <SwmLink doc-title="Update User Screen (COUSR02)">[Update User Screen (COUSR02)](/.swm/update-user-screen-cousr02.d5i0f.sw.md)</SwmLink>
+
+# Program Drill Down
 
 ```mermaid
 flowchart TB
@@ -266,6 +271,6 @@ If the user information has been modified, the function performs the <SwmToken p
 
 &nbsp;
 
-_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
+*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

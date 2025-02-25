@@ -1,6 +1,7 @@
 ---
 title: Transaction Reports Screen (CORPT00)
 ---
+
 The Transaction Reports screen (CORPT00) serves as the primary interface for users to select and generate various transaction reports. Users can choose between monthly, yearly, or custom date range reports, and confirm their selection for printing.
 
 ## Screen Preview
@@ -29,50 +30,112 @@ ENTER=Continue F3=Back
 
 ## Fields
 
-### Current Date (CURDATE)
-
 ### Transaction Name (TRNNAME)
 
-This field displays the transaction name. It is a fixed field with a length of 4 characters and is displayed in blue color.
+- Length: 4 characters
+- Fixed field
+- Color: Blue
+
+### Current Date (CURDATE)
+
+- Length: 8 characters
+- Fixed field
+- Color: Blue
+- Initial value: 'mm/dd/yy'
 
 ### Program Name (PGMNAME)
 
-This field displays the current date in the format 'mm/dd/yy'. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Fixed field
+- Color: Blue
+- Associated document: <SwmLink doc-title="Report Processing Flow (CORPT00C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/report-processing-flow-corpt00c.ivkytwt9.sw.md">[Report Processing Flow (CORPT00C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/ivkytwt9)</SwmLink>
 
 ### Current Time (CURTIME)
 
-This field displays the program name. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Fixed field
+- Color: Blue
+- Initial value: 'hh:mm:ss'
 
 ### Monthly Report Selection (MONTHLY)
 
-This field displays the current time in the format 'hh:mm:ss'. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 1 character
+- Input field
+- Color: Green
+- Underlined
 
 ### Yearly Report Selection (YEARLY)
 
-This field allows the user to select the monthly report option. It is an input field with a length of 1 character, underlined, and displayed in green color. The field is validated to ensure it is not empty or contains low-values.
+- Length: 1 character
+- Input field
+- Color: Green
+- Underlined
 
 ### Custom Report Selection (CUSTOM)
 
-This field allows the user to select the yearly report option. It is an input field with a length of 1 character, underlined, and displayed in green color. The field is validated to ensure it is not empty or contains low-values.
+- Length: 1 character
+- Input field
+- Color: Green
+- Underlined
 
-### Start Date (SDTMM, SDTDD, SDTYYYY)
+### Start Date Month (SDTMM)
 
-This field allows the user to select the custom report option. It is an input field with a length of 1 character, underlined, and displayed in green color. The field is validated to ensure it is not empty or contains low-values.
+- Length: 2 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
 
-### End Date (EDTMM, EDTDD, EDTYYYY)
+### Start Date Day (SDTDD)
 
-These fields allow the user to input the start date for the custom report. The date is divided into three fields: month (SDTMM), day (SDTDD), and year (SDTYYYY). Each field is underlined, displayed in green color, and validated to ensure they are not empty, contain valid numeric values, and represent a valid date.
+- Length: 2 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
+
+### Start Date Year (SDTYYYY)
+
+- Length: 4 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
+
+### End Date Month (EDTMM)
+
+- Length: 2 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
+
+### End Date Day (EDTDD)
+
+- Length: 2 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
+
+### End Date Year (EDTYYYY)
+
+- Length: 4 characters
+- Input field
+- Color: Green
+- Underlined
+- Numeric
 
 ### Confirmation (CONFIRM)
 
-These fields allow the user to input the end date for the custom report. The date is divided into three fields: month (EDTMM), day (EDTDD), and year (EDTYYYY). Each field is underlined, displayed in green color, and validated to ensure they are not empty, contain valid numeric values, and represent a valid date.
-
-### Error/Status Message (ERRMSG)
-
-This field allows the user to confirm the report submission. It is an input field with a length of 1 character, underlined, and displayed in green color. The field is validated to ensure it contains either 'Y' or 'N' (case-insensitive).
+- Length: 1 character
+- Input field
+- Color: Green
+- Underlined
+- Valid values: 'Y' or 'N'
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

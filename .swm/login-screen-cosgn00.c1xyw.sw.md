@@ -1,6 +1,7 @@
 ---
 title: Login Screen (COSGN00)
 ---
+
 The Login Screen (COSGN00) is the initial interface for users to access the CardDemo application. It prompts users to enter their User ID and Password to authenticate and gain access to the system.
 
 ## Screen Preview
@@ -8,7 +9,7 @@ The Login Screen (COSGN00) is the initial interface for users to access the Card
 ```
 Tran : CC00                  AWS Mainframe Modernization             Date : mm/dd/yy
 Prog : COSGN00C                        CardDemo                      Time : Ahh:mm:ss
-AppID:                                                              SysID:         
+AppID:                                                              SysID:
 
      This is a Credit Card Demo Application for Mainframe Modernization
 
@@ -34,42 +35,64 @@ ENTER=Sign-on  F3=Exit
 
 ## Fields
 
-### Current Date (CURDATE)
-
 ### Transaction Name (TRNNAME)
 
-This field is used to display the transaction name. It is a fixed field with a length of 4 characters and is displayed in blue color.
+- Length: 4 characters
+- Color: Blue
+- Field is skipped and set to normal
+
+### Current Date (CURDATE)
+
+- Length: 8 characters
+- Color: Blue
+- Initial value: 'mm/dd/yy'
+- Field is skipped and set to normal
 
 ### Program Name (PGMNAME)
 
-This field displays the current date in the format 'mm/dd/yy'. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Blue
+- Field is protected and set to normal
+- Associated document: <SwmLink doc-title="Sign-On Flow (COSGN00C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/sign-on-flow-cosgn00c.u82f6gob.sw.md">[Sign-On Flow (COSGN00C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/u82f6gob)</SwmLink>
 
 ### Current Time (CURTIME)
 
-This field displays the program name. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 9 characters
+- Color: Blue
+- Initial value: 'Ahh:mm:ss'
+- Field is protected and set to normal
 
 ### Application ID (APPLID)
 
-This field displays the current time in the format 'hh:mm:ss'. It is a fixed field with a length of 9 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Blue
+- Field is protected and set to normal
 
 ### System ID (SYSID)
 
-This field displays the application ID. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Blue
+- Field is protected and set to normal
 
 ### User ID (USERID)
 
-This field displays the system ID. It is a fixed field with a length of 8 characters and is displayed in blue color.
+- Length: 8 characters
+- Color: Green
+- Field is unprotected and set to normal
+- Highlight is off
+- Initial value: '(8 Char)'
 
 ### Password (PASSWD)
 
-This field is used for the user to input their User ID. It is an unprotected field with a length of 8 characters and is displayed in green color. The field is validated to ensure it is not empty.
-
-### Error Message (ERRMSG)
-
-This field is used for the user to input their password. It is an unprotected field with a length of 8 characters and is displayed in green color. The field is validated to ensure it is not empty.
+- Length: 8 characters
+- Color: Green
+- Field is unprotected and set to normal
+- Highlight is off
+- Initial value: '\_**\_\_**\_'
+- Field is dark
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

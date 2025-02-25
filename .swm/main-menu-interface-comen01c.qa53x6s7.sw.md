@@ -1,7 +1,6 @@
 ---
 title: Main Menu Interface (COMEN01C)
 ---
-
 The <SwmToken path="/app/cbl/COMEN01C.cbl" pos="2:7:7" line-data="      * Program     : COMEN01C.CBL" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo">`COMEN01C`</SwmToken> program serves as the main menu interface for regular users in the application.
 
 # Usages
@@ -23,6 +22,10 @@ graph TD
 "] --> L
     L["Main Menu Interface (COMEN01C)"]
 ```
+
+# Program Screens
+
+- <SwmLink doc-title="User Navigation Screen (COMEN01)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/user-navigation-screen-comen01.vz3r6.sw.md">[User Navigation Screen (COMEN01)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/vz3r6)</SwmLink>
 
 # Program Drill Down
 
@@ -184,6 +187,6 @@ If no errors are present, the function sets the necessary transaction and progra
 
 &nbsp;
 
-_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
+*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

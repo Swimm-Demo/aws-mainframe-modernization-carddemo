@@ -4,6 +4,12 @@ title: Adding a new transaction (COTRN02C)
 
 In the CardDemo application, adding a new transaction involves displaying an input screen, processing user input, and validating and converting field data. The process starts with the user entering transaction details, which are then validated for correctness. If the input is valid, the transaction is added to the transaction file; otherwise, error messages are displayed to guide the user in correcting the input.
 
+# Program Screens
+
+- <SwmLink doc-title="Transaction Add Screen (COTRN02)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/transaction-add-screen-cotrn02.a57xw.sw.md">[Transaction Add Screen (COTRN02)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/a57xw)</SwmLink>
+
+# Program Drill Down
+
 ```mermaid
 flowchart TB
 A["PROCESS-ENTER-KEY"] --> B["VALIDATE-INPUT-KEY-FIELDS"]
@@ -468,4 +474,4 @@ Finally, the <SwmToken path="/app/cbl/COTRN02C.cbl" pos="466:3:7" line-data="   
 
 _This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
-<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

@@ -35,88 +35,89 @@ ENTER=Continue  F3=Back  F7=Backward  F8=Forward
 
 ## Fields
 
-### Program Name (PGMNAME)
-
 ### Transaction Name (TRNNAME)
 
 - Length: 4 characters
-- Fixed value: 'CU00'
+- Fixed information
 - Color: Blue
-- Attribute: Skip, Field Set
+
+### Title (TITLE01)
+
+- Length: 40 characters
+- Fixed information
+- Color: Yellow
 
 ### Current Date (CURDATE)
 
 - Length: 8 characters
-- Fixed value: 'COUSR00C'
+- Fixed information
+- Format: mm/dd/yy
 - Color: Blue
-- Attribute: Skip, Field Set
+
+### Program Name (PGMNAME)
+
+- Length: 8 characters
+- Fixed information
+- Color: Blue
+- Associated document: <SwmLink doc-title="List Users (COUSR00C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/list-users-cousr00c.7fm42ie0.sw.md">[List Users (COUSR00C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/7fm42ie0)</SwmLink>
+
+### Title (TITLE02)
+
+- Length: 40 characters
+- Fixed information
+- Color: Yellow
 
 ### Current Time (CURTIME)
 
 - Length: 8 characters
-- Initial value: 'mm/dd/yy'
+- Fixed information
+- Format: hh:mm:ss
 - Color: Blue
-- Attribute: Skip, Field Set
 
 ### Page Number (PAGENUM)
 
 - Length: 8 characters
-- Initial value: 'hh:mm:ss'
+- Fixed information
 - Color: Blue
-- Attribute: Skip, Field Set
 
 ### Search User ID (USRIDIN)
 
 - Length: 8 characters
-- Initial value: Blank
-- Color: Blue
-- Attribute: Skip, Field Set
+- User input field
+- Underlined, green color
 
-### User Selection (SEL0001 - SEL0010)
+### Selection (SEL0001 - SEL0010)
 
-- Length: 8 characters
-- Color: Green
-- Attribute: Field Set, Normal, Unprotected
-- Highlight: Underline
+- Length: 1 character
+- User input field
+- Underlined, green color
 
 ### User ID (USRID01 - USRID10)
 
-- Length: 1 character
-- Color: Green
-- Attribute: Field Set, Normal, Unprotected
-- Highlight: Underline
-- Valid values: 'U' for Update, 'D' for Delete
+- Length: 8 characters
+- Fixed information
+- Color: Blue
 
 ### First Name (FNAME01 - FNAME10)
 
-- Length: 8 characters
-- Initial value: Blank
+- Length: 20 characters
+- Fixed information
 - Color: Blue
-- Attribute: Skip, Field Set
 
 ### Last Name (LNAME01 - LNAME10)
 
 - Length: 20 characters
-- Initial value: Blank
+- Fixed information
 - Color: Blue
-- Attribute: Skip, Field Set
 
 ### User Type (UTYPE01 - UTYPE10)
 
-- Length: 20 characters
-- Initial value: Blank
-- Color: Blue
-- Attribute: Skip, Field Set
-
-### Error/Status Message (ERRMSG)
-
 - Length: 1 character
-- Initial value: Blank
+- Fixed information
 - Color: Blue
-- Attribute: Skip, Field Set
 
 &nbsp;
 
 *This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

@@ -32,75 +32,65 @@ ENTER=Fetch  F3=Save&Exit  F4=Clear  F5=Save  F12=Cancel
 
 ## Fields
 
-### Current Date (CURDATE)
-
 ### Transaction Name (TRNNAME)
 
 - Length: 4 characters
+- Display-only field
 - Color: Blue
-- This field is skipped and set by the program.
+
+### Current Date (CURDATE)
+
+- Length: 8 characters
+- Display-only field
+- Color: Blue
+- Format: mm/dd/yy
 
 ### Program Name (PGMNAME)
 
 - Length: 8 characters
+- Display-only field
 - Color: Blue
-- Initial value: 'mm/dd/yy'
-- This field is skipped and set by the program.
+- Associated document: <SwmLink doc-title="Update Users (COUSR02C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/update-users-cousr02c.ksabdybr.sw.md">[Update Users (COUSR02C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/ksabdybr)</SwmLink>
 
 ### Current Time (CURTIME)
 
 - Length: 8 characters
+- Display-only field
 - Color: Blue
-- This field is skipped and set by the program.
+- Format: hh:mm:ss
 
 ### User ID Input (USRIDIN)
 
 - Length: 8 characters
-- Color: Blue
-- Initial value: 'hh:mm:ss'
-- This field is skipped and set by the program.
+- Required field
+- Underlined, green color
+- Initial cursor position
 
 ### First Name (FNAME)
 
-- Length: 8 characters
-- Color: Green
-- Underlined
-- Required field
-- Initial cursor position
-- Validation: Cannot be empty
+- Length: 20 characters
+- Editable field
+- Underlined, green color
 
 ### Last Name (LNAME)
 
 - Length: 20 characters
-- Color: Green
-- Underlined
-- Required field
-- Validation: Cannot be empty
+- Editable field
+- Underlined, green color
 
 ### Password (PASSWD)
 
-- Length: 20 characters
-- Color: Green
-- Underlined
-- Required field
-- Validation: Cannot be empty
+- Length: 8 characters
+- Editable field
+- Underlined, green color
+- Hidden input (dark)
 
 ### User Type (USRTYPE)
 
-- Length: 8 characters
-- Color: Green
-- Underlined
-- Required field
-- Dark attribute
-- Validation: Cannot be empty
-
-### Error Message (ERRMSG)
-
 - Length: 1 character
-- Color: Green
-- Underlined
-- Required field
-- Validation: Must be 'A' for Admin or 'U' for User
+- Editable field
+- Underlined, green color
+- Valid values: A (Admin), U (User)
 
 &nbsp;
 

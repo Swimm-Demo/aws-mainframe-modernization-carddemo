@@ -1,6 +1,7 @@
 ---
 title: Transaction Add Screen (COTRN02)
 ---
+
 The Transaction Add screen (COTRN02) allows users to input and confirm details for adding a new transaction to the system. Users can enter account or card numbers, transaction type, category, source, description, amount, dates, and merchant information, ensuring all necessary data is captured for the transaction.
 
 ## Screen Preview
@@ -36,82 +37,82 @@ ENTER=Continue  F3=Back  F4=Clear  F5=Copy Last Tran.
 
 ## Fields
 
-### Current Date (CURDATE)
-
 ### Transaction Name (TRNNAME)
 
-The Transaction Name field is a 4-character field displayed in blue color. It is a non-editable field, as indicated by the `ASKIP` attribute.
+This field is used to display the transaction name. It is a fixed-length field with a length of 4 characters. The field is non-editable and is displayed in blue color.
+
+### Current Date (CURDATE)
+
+This field displays the current date in the format 'mm/dd/yy'. It is a non-editable field with a length of 8 characters and is displayed in blue color.
 
 ### Program Name (PGMNAME)
 
-The Current Date field is an 8-character field initialized with the format 'mm/dd/yy'. It is displayed in blue color and is non-editable.
+This field is used to display the program name. It is a fixed-length field with a length of 8 characters. The field is non-editable and is displayed in blue color.
+
+Associated document: <SwmLink doc-title="Adding a new transaction (COTRN02C)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/adding-a-new-transaction-cotrn02c.i090jig3.sw.md">[Adding a new transaction (COTRN02C)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/i090jig3)</SwmLink>
 
 ### Current Time (CURTIME)
 
-The Program Name field is an 8-character field displayed in blue color. It is a non-editable field, as indicated by the `ASKIP` attribute.
+This field displays the current time in the format 'hh:mm:ss'. It is a non-editable field with a length of 8 characters and is displayed in blue color.
 
 ### Account ID Input (ACTIDIN)
 
-The Current Time field is an 8-character field initialized with the format 'hh:mm:ss'. It is displayed in blue color and is non-editable.
+This field is used to input the account ID. It is an editable field with a length of 11 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Card Number Input (CARDNIN)
 
-The Account ID Input field is an 11-character field where users can enter the account number. It is displayed in green color with an underline highlight. The field is validated to ensure it is numeric.
+This field is used to input the card number. It is an editable field with a length of 16 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Transaction Type Code (TTYPCD)
 
-The Card Number Input field is a 16-character field where users can enter the card number. It is displayed in green color with an underline highlight. The field is validated to ensure it is numeric.
+This field is used to input the transaction type code. It is an editable field with a length of 2 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Transaction Category Code (TCATCD)
 
-The Transaction Type Code field is a 2-character field where users can enter the transaction type code. It is displayed in green color with an underline highlight. The field is validated to ensure it is numeric and not empty.
+This field is used to input the transaction category code. It is an editable field with a length of 4 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Transaction Source (TRNSRC)
 
-The Transaction Category Code field is a 4-character field where users can enter the transaction category code. It is displayed in green color with an underline highlight. The field is validated to ensure it is numeric and not empty.
+This field is used to input the transaction source. It is an editable field with a length of 10 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Transaction Description (TDESC)
 
-The Transaction Source field is a 10-character field where users can enter the transaction source. It is displayed in green color with an underline highlight. The field is validated to ensure it is not empty.
+This field is used to input the transaction description. It is an editable field with a length of 60 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Transaction Amount (TRNAMT)
 
-The Transaction Description field is a 60-character field where users can enter the transaction description. It is displayed in green color with an underline highlight. The field is validated to ensure it is not empty.
+This field is used to input the transaction amount. It is an editable field with a length of 12 characters. The field is underlined, displayed in green color, and is initially blank. The format for the amount is specified as '(-99999999.99)'.
 
 ### Original Date (TORIGDT)
 
-The Transaction Amount field is a 12-character field where users can enter the transaction amount. It is displayed in green color with an underline highlight. The field is validated to ensure it follows the format '-99999999.99' and is not empty.
+This field is used to input the original date of the transaction. It is an editable field with a length of 10 characters. The field is underlined, displayed in green color, and is initially blank. The format for the date is specified as '(YYYY-MM-DD)'.
 
 ### Processing Date (TPROCDT)
 
-The Original Date field is a 10-character field where users can enter the original date of the transaction. It is displayed in green color with an underline highlight. The field is validated to ensure it follows the format 'YYYY-MM-DD' and is not empty.
+This field is used to input the processing date of the transaction. It is an editable field with a length of 10 characters. The field is underlined, displayed in green color, and is initially blank. The format for the date is specified as '(YYYY-MM-DD)'.
 
 ### Merchant ID (MID)
 
-The Processing Date field is a 10-character field where users can enter the processing date of the transaction. It is displayed in green color with an underline highlight. The field is validated to ensure it follows the format 'YYYY-MM-DD' and is not empty.
+This field is used to input the merchant ID. It is an editable field with a length of 9 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Merchant Name (MNAME)
 
-The Merchant ID field is a 9-character field where users can enter the merchant ID. It is displayed in green color with an underline highlight. The field is validated to ensure it is numeric and not empty.
+This field is used to input the merchant name. It is an editable field with a length of 30 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Merchant City (MCITY)
 
-The Merchant Name field is a 30-character field where users can enter the merchant name. It is displayed in green color with an underline highlight. The field is validated to ensure it is not empty.
+This field is used to input the merchant city. It is an editable field with a length of 25 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Merchant Zip (MZIP)
 
-The Merchant City field is a 25-character field where users can enter the merchant city. It is displayed in green color with an underline highlight. The field is validated to ensure it is not empty.
+This field is used to input the merchant zip code. It is an editable field with a length of 10 characters. The field is underlined, displayed in green color, and is initially blank.
 
 ### Confirmation (CONFIRM)
 
-The Merchant Zip field is a 10-character field where users can enter the merchant zip code. It is displayed in green color with an underline highlight. The field is validated to ensure it is not empty.
-
-### Error/Status Message (ERRMSG)
-
-The Confirmation field is a single-character field where users can confirm the transaction by entering 'Y' or 'N'. It is displayed in green color with an underline highlight. The field is validated to ensure it contains a valid value (Y/N).
+This field is used to confirm the transaction. It is an editable field with a length of 1 character. The field is underlined, displayed in green color, and the user must input 'Y' for yes or 'N' for no.
 
 &nbsp;
 
-*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
+_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
 
-<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://staging.swimm.cloud/)</sup></SwmMeta>
+<SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

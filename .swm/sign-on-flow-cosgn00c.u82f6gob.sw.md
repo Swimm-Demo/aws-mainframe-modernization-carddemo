@@ -1,7 +1,6 @@
 ---
 title: Sign-On Flow (COSGN00C)
 ---
-
 The document describes the process of managing user sign-on by receiving credentials, validating them, and routing users to the appropriate menu based on their role. This is achieved by processing user input, validating credentials against a security file, and routing users based on their role.
 
 # Usages
@@ -23,6 +22,10 @@ graph TD
 "] --> L
     L["Sign-On Flow (COSGN00C)"]
 ```
+
+# Program Screens
+
+- <SwmLink doc-title="Login Screen (COSGN00)" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v" repo-name="aws-mainframe-modernization-carddemo" path="/.swm/login-screen-cosgn00.c1xyw.sw.md">[Login Screen (COSGN00)](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v/docs/c1xyw)</SwmLink>
 
 # Program Drill Down
 
@@ -199,6 +202,6 @@ If the passwords do not match, do user wasn't found, or any other response value
 
 &nbsp;
 
-_This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human_
+*This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
 <SwmMeta version="3.0.0"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
