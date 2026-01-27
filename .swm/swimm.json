@@ -1,3 +1,8 @@
 {
-    "repo_id": "Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v"
+  "repo_id": "Z2l0aHViJTNBJTNBa3luZHJ5bC1hd3MtbWFpbmZyYW1lLW1vZGVybml6YXRpb24tY2FyZGRlbW8lM0ElM0FTd2ltbS1EZW1v",
+  "skipSelfExplanatoryCheck": true,
+  "should_cache_business_rules": true,
+  "should_cache_section_diagrams": true,
+  "should_cache_doc_generation": true,
+  "should_cache_function_summaries": true
 }
