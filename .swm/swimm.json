@@ -4,5 +4,6 @@
   "should_cache_business_rules": true,
   "should_cache_section_diagrams": true,
   "should_cache_doc_generation": true,
-  "should_cache_function_summaries": true
+  "should_cache_function_summaries": true,
+  "should_split_flow_docs": false
 }
