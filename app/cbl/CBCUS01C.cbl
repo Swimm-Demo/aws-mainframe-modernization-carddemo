@@ -69,6 +69,7 @@
       *****************************************************************
        PROCEDURE DIVISION.
            DISPLAY 'START OF EXECUTION OF PROGRAM CBCUS01C'.
+           DISPLAY 'CUSTOMER LISTING'.
            PERFORM 0000-CUSTFILE-OPEN.
 
            PERFORM UNTIL END-OF-FILE = 'Y'
