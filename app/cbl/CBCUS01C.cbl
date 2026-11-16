@@ -43,6 +43,7 @@
 
       *****************************************************************
        COPY CVCUS01Y.
+       01  CUSTFILE-READ-COUNT     PIC 9(09) VALUE 0.
        01  CUSTFILE-STATUS.
            05  CUSTFILE-STAT1      PIC X.
            05  CUSTFILE-STAT2      PIC X.
@@ -82,6 +83,7 @@
 
            PERFORM 9000-CUSTFILE-CLOSE.
 
+           DISPLAY 'TOTAL CUSTOMERS READ: ' CUSTFILE-READ-COUNT
            DISPLAY 'END OF EXECUTION OF PROGRAM CBCUS01C'.
 
            GOBACK.
@@ -93,7 +95,7 @@
            READ CUSTFILE-FILE INTO CUSTOMER-RECORD.
            IF  CUSTFILE-STATUS = '00'
                MOVE 0 TO APPL-RESULT
-               DISPLAY CUSTOMER-RECORD 
+               ADD 1 TO CUSTFILE-READ-COUNT
            ELSE
                IF  CUSTFILE-STATUS = '10'
                    MOVE 16 TO APPL-RESULT
